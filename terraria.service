@@ -1,0 +1,10 @@
+[Unit]
+Description=Terraria start
+After=network.target local-fs.target
+
+[Service]
+ExecStart=/opt/1421/Linux/script.sh
+#Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

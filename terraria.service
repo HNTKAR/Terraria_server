@@ -1,10 +1,13 @@
 [Unit]
 Description=Terraria start
-After=network.target local-fs.target
 
 [Service]
-ExecStart=/opt/1421/Linux/script.sh
-#Restart=on-failure
+ExecStart=screen -DmS terra bash -c "/opt/TerrariaServer.bin.x86_64 -config /opt/config/systemd/Terraria_server/config.txt"
+ExecStop=screen -r terra -X stuff "exit\n"
+Restart=on-failure
+User=Terraria
+Group=Terraria
+KillMode=none
 
 [Install]
 WantedBy=multi-user.target

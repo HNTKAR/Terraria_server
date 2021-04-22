@@ -1,1 +1,1 @@
-world=/home/terraria/.local/share/Terraria/Worlds/Voiceroid.wld
+world=/opt/config/Worlds/Voiceroid.wld
